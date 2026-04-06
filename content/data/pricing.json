@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "badge": "Simple, Transparent Pricing",
+    "title": "Plans for Every Need",
+    "description": "Whether you're an individual patient or a large hospital network, we have a plan that fits. Start free, upgrade when you're ready.",
+    "primaryCta": {
+      "text": "Get Started Free",
+      "href": "/api/auth/signin"
+    },
+    "secondaryCta": {
+      "text": "Contact Sales",
+      "href": "/contact"
+    }
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "description": "All plans include core features. Upgrade anytime.",
+    "tiers": [
+      {
+        "id": "free",
+        "name": "Free",
+        "description": "Perfect for individuals getting started",
+        "price": "₦0",
+        "features": [
+          "AI Symptom Check (5/month)",
+          "Hospital Search",
+          "Basic Appointment Booking",
+          "Digital Health Records",
+          "Email Support"
+        ],
+        "cta": {
+          "text": "Start Free",
+          "href": "/api/auth/signin"
+        }
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "description": "For individuals who need more",
+        "price": "₦2,500",
+        "priceSuffix": "/month",
+        "features": [
+          "Unlimited AI Symptom Check",
+          "Priority Appointment Booking",
+          "Emergency Dispatch Access",
+          "Family Profile (up to 5)",
+          "Lab Result Integration",
+          "24/7 Phone Support"
+        ],
+        "cta": {
+          "text": "Start Premium",
+          "href": "/api/auth/signin?plan=premium"
+        },
+        "highlighted": true,
+        "badge": "Most Popular"
+      },
+      {
+        "id": "family",
+        "name": "Family",
+        "description": "Coverage for your entire household",
+        "price": "₦5,000",
+        "priceSuffix": "/month",
+        "features": [
+          "Everything in Premium",
+          "Up to 10 Family Members",
+          "Family Health Dashboard",
+          "Emergency Coverage for All",
+          "Medical History Timeline",
+          "Priority Support"
+        ],
+        "cta": {
+          "text": "Start Family Plan",
+          "href": "/api/auth/signin?plan=family"
+        }
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "description": "For hospitals and healthcare organizations",
+        "price": "Custom",
+        "features": [
+          "Unlimited Doctor Accounts",
+          "Hospital Dashboard",
+          "Patient Queue Management",
+          "Analytics & Reporting",
+          "API Integration",
+          "Dedicated Account Manager",
+          "Custom Training"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  "faq": [
+    {
+      "id": "1",
+      "question": "Can I use NeronaHealth for free?",
+      "answer": "Yes! Our free plan includes AI symptom check (5 per month), hospital search, basic appointment booking, and digital health records. Upgrade anytime for more features."
+    },
+    {
+      "id": "2",
+      "question": "How does the AI symptom check work?",
+      "answer": "You describe your symptoms in natural language, and our AI analyzes urgency, identifies potential conditions, and recommends the appropriate care pathway—all in seconds."
+    },
+    {
+      "id": "3",
+      "question": "Can I cancel my subscription anytime?",
+      "answer": "Absolutely. Cancel anytime from your account settings. You'll continue to have access until the end of your billing period."
+    },
+    {
+      "id": "4",
+      "question": "Is my health data secure?",
+      "answer": "Yes. We use bank-grade encryption, are HIPAA compliant, and never sell your data. You control who sees your information and for how long."
+    },
+    {
+      "id": "5",
+      "question": "How do I add family members to my plan?",
+      "answer": "Once you subscribe to the Family plan, you can invite family members from your dashboard. They'll receive an email to create their linked account."
+    },
+    {
+      "id": "6",
+      "question": "What hospitals are in your network?",
+      "answer": "We partner with 500+ verified hospitals across all 36 states in Nigeria. Use our hospital search to find facilities near you."
+    }
+  ]
+}

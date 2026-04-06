@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "quote": "I described my chest pain to the AI and it immediately recommended I see a doctor. Turns out it was early signs of something serious. NeronaHealth may have saved my life.",
+    "author": "Adaora Okafor",
+    "role": "Patient",
+    "company": "Lagos, Nigeria",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "quote": "As a doctor, I was skeptical at first. But NeronaHealth has reduced my no-shows by 40% and I can see patient histories before they walk in. Game changer for my practice.",
+    "author": "Dr. Emeka Nwosu",
+    "role": "Cardiologist",
+    "company": "Lagos General Hospital",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "quote": "Our hospital has seen a 60% increase in appointment bookings since joining. Patients love being able to see real-time availability.",
+    "author": "Dr. Funke Adeyemi",
+    "role": "Medical Director",
+    "company": "St. Mary Medical Center",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "quote": "The emergency dispatch feature helped us reach a patient in critical condition within 12 minutes. The GPS tracking was incredibly accurate.",
+    "author": "Oluwaseun Bakare",
+    "role": "Ambulance Dispatcher",
+    "company": "Rapid Response EMS",
+    "rating": 5
+  },
+  {
+    "id": "5",
+    "quote": "Finally, a healthcare app that actually works in Nigeria. I found a specialist, booked an appointment, and got my prescription—all in one place.",
+    "author": "Chinedu Eze",
+    "role": "Patient",
+    "company": "Abuja, Nigeria",
+    "rating": 5
+  },
+  {
+    "id": "6",
+    "quote": "Managing my clinic has never been easier. NeronaHealth handles scheduling, patient records, and even insurance verification automatically.",
+    "author": "Dr. Amaka Obi",
+    "role": "General Practitioner",
+    "company": "HealthFirst Clinic",
+    "rating": 5
+  }
+]

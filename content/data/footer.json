@@ -1,0 +1,16 @@
+{
+  "company": {
+    "name": "NeronaHealth",
+    "tagline": "Healthcare That Understands You",
+    "description": "AI-powered healthcare platform connecting patients, doctors, and hospitals across Nigeria."
+  },
+  "contact": {
+    "address": "15 Admiralty Way, Lekki, Lagos, Nigeria",
+    "phone": "+234-800-HEALTH",
+    "email": "hello@neronahealth.com"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "Get healthcare tips and platform updates delivered to your inbox"
+  }
+}

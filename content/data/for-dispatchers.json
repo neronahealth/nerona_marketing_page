@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "For Emergency Services",
+    "title": "Dispatch Excellence, Delivered",
+    "description": "Coordinate ambulances, track responders in real-time, and save lives faster. NeronaHealth connects emergency services with patients who need immediate help.",
+    "primaryCta": {
+      "text": "Join Dispatch Network",
+      "href": "/api/auth/signin?role=dispatcher"
+    },
+    "secondaryCta": {
+      "text": "See How It Works",
+      "href": "#how-it-works"
+    }
+  },
+  "features": {
+    "title": "Emergency Response Tools",
+    "description": "Everything you need to coordinate life-saving emergency care",
+    "features": [
+      {
+        "icon": "Ambulance",
+        "title": "Smart Dispatch",
+        "description": "Receive emergency requests with GPS coordinates. Automatically assign the nearest available ambulance.",
+        "role": "dispatcher"
+      },
+      {
+        "icon": "MapPin",
+        "title": "Real-Time Tracking",
+        "description": "Track all ambulances on a live map. See ETAs, route progress, and status updates in real-time.",
+        "role": "dispatcher"
+      },
+      {
+        "icon": "Phone",
+        "title": "Integrated Communication",
+        "description": "Instant voice and text communication with drivers, patients, and receiving hospitals."
+      },
+      {
+        "icon": "Clock",
+        "title": "Response Analytics",
+        "description": "Track response times, patient outcomes, and operational metrics to improve performance."
+      },
+      {
+        "icon": "Hospital",
+        "title": "Hospital Coordination",
+        "description": "Alert receiving hospitals before arrival. Share patient vitals and estimated time of arrival."
+      },
+      {
+        "icon": "Shield",
+        "title": "Priority Routing",
+        "description": "Integrate with traffic systems for faster routes. Get patients to care faster."
+      }
+    ]
+  },
+  "steps": {
+    "title": "Getting Started",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Register Your Fleet",
+        "description": "Add your ambulances and drivers to the network. Verify credentials and service areas."
+      },
+      {
+        "number": 2,
+        "title": "Set Coverage Areas",
+        "description": "Define your service zones and availability. Our system routes requests to the nearest available unit."
+      },
+      {
+        "number": 3,
+        "title": "Receive Requests",
+        "description": "Get instant alerts for emergencies in your coverage area with location and patient details."
+      },
+      {
+        "number": 4,
+        "title": "Respond & Coordinate",
+        "description": "Dispatch units, track progress, and communicate with hospitals for seamless patient handoff."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Save More Lives?",
+    "description": "Join the emergency response network serving patients across Nigeria.",
+    "primaryCta": {
+      "text": "Join Network",
+      "href": "/api/auth/signin?role=dispatcher"
+    },
+    "secondaryCta": {
+      "text": "Request Demo",
+      "href": "/contact"
+    },
+    "variant": "emergency"
+  },
+  "stats": [
+    { "value": "15", "suffix": "min", "label": "Avg. Response Time" },
+    { "value": "200", "suffix": "+", "label": "Partner Ambulances" },
+    { "value": "36", "suffix": "", "label": "States Covered" },
+    { "value": "99", "suffix": "%", "label": "Success Rate" }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "Revolutionizing Healthcare in Nigeria",
+    "title": "Healthcare That Understands You",
+    "description": "AI-powered symptom triage, verified hospitals, and seamless appointments. Get the right care at the right time with NeronaHealth.",
+    "primaryCta": {
+      "text": "Get Started Free",
+      "href": "/api/auth/signin"
+    },
+    "secondaryCta": {
+      "text": "See How It Works",
+      "href": "/features"
+    }
+  },
+  "features": {
+    "title": "Everything You Need for Better Health",
+    "description": "From AI symptom analysis to emergency dispatch, we connect you with the right care instantly",
+    "features": [
+      {
+        "icon": "Stethoscope",
+        "title": "AI Symptom Analysis",
+        "description": "Describe your symptoms naturally. Our AI analyzes urgency and recommends the right care pathway in seconds.",
+        "role": "patient"
+      },
+      {
+        "icon": "Building2",
+        "title": "Verified Hospitals",
+        "description": "Browse vetted healthcare facilities with real-time capacity updates, pricing transparency, and patient reviews.",
+        "role": "patient"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Smart Appointments",
+        "description": "Book appointments with available doctors instantly. No phone calls, no waiting, just seamless scheduling.",
+        "role": "patient"
+      },
+      {
+        "icon": "Ambulance",
+        "title": "Emergency Dispatch",
+        "description": "One-tap emergency request with GPS tracking. Ambulance dispatched to your location within minutes.",
+        "role": "patient"
+      },
+      {
+        "icon": "FileText",
+        "title": "Digital Records",
+        "description": "Secure cloud storage for your medical history. Access prescriptions, lab results, and visit notes anywhere.",
+        "role": "patient"
+      },
+      {
+        "icon": "Shield",
+        "title": "Privacy First",
+        "description": "Your health data is encrypted and protected. HIPAA-compliant security with complete transparency.",
+        "role": "patient"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "id": "1",
+      "quote": "I described my chest pain to the AI and it immediately recommended I see a doctor. Turns out it was early signs of something serious. NeronaHealth may have saved my life.",
+      "author": "Adaora Okafor",
+      "role": "Patient",
+      "company": "Lagos, Nigeria",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "quote": "As a doctor, I was skeptical at first. But NeronaHealth has reduced my no-shows by 40% and I can see patient histories before they walk in. Game changer for my practice.",
+      "author": "Dr. Emeka Nwosu",
+      "role": "Cardiologist",
+      "company": "Lagos General Hospital",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "quote": "Our hospital has seen a 60% increase in appointment bookings since joining. Patients love being able to see real-time availability.",
+      "author": "Dr. Funke Adeyemi",
+      "role": "Medical Director",
+      "company": "St. Mary Medical Center",
+      "rating": 5
+    }
+  ],
+  "cta": {
+    "title": "Ready to Experience Better Healthcare?",
+    "description": "Join thousands of patients and healthcare providers across Nigeria who trust NeronaHealth.",
+    "primaryCta": {
+      "text": "Create Free Account",
+      "href": "/api/auth/signin"
+    },
+    "secondaryCta": {
+      "text": "Contact Sales",
+      "href": "/contact"
+    },
+    "variant": "primary"
+  }
+}

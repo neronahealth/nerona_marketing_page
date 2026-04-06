@@ -1,0 +1,66 @@
+{
+  "main": [
+    {
+      "label": "Features",
+      "href": "/features",
+      "children": [
+        { "label": "AI Triage", "href": "/features#ai-triage" },
+        { "label": "Hospital Discovery", "href": "/features#hospitals" },
+        { "label": "Appointments", "href": "/features#appointments" },
+        { "label": "Emergency", "href": "/features#emergency" },
+        { "label": "Medical Records", "href": "/features#records" }
+      ]
+    },
+    {
+      "label": "Solutions",
+      "href": "#",
+      "children": [
+        { "label": "For Patients", "href": "/for-patients" },
+        { "label": "For Doctors", "href": "/for-doctors" },
+        { "label": "For Hospitals", "href": "/for-hospitals" },
+        { "label": "For Dispatchers", "href": "/for-dispatchers" },
+        { "label": "Enterprise", "href": "/enterprise" }
+      ]
+    },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "About", "href": "/about" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "product": [
+      { "label": "Features", "href": "/features" },
+      { "label": "Pricing", "href": "/pricing" },
+      { "label": "AI Triage", "href": "/features#ai-triage" },
+      { "label": "Hospital Discovery", "href": "/features#hospitals" },
+      { "label": "Emergency Dispatch", "href": "/features#emergency" }
+    ],
+    "solutions": [
+      { "label": "For Patients", "href": "/for-patients" },
+      { "label": "For Doctors", "href": "/for-doctors" },
+      { "label": "For Hospitals", "href": "/for-hospitals" },
+      { "label": "For Dispatchers", "href": "/for-dispatchers" },
+      { "label": "Enterprise", "href": "/enterprise" }
+    ],
+    "company": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Careers", "href": "/careers" },
+      { "label": "Press", "href": "/press" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "Cookie Policy", "href": "/cookies" },
+      { "label": "Data Protection", "href": "/data-protection" },
+      { "label": "HIPAA Compliance", "href": "/hipaa" }
+    ]
+  },
+  "social": [
+    { "name": "Twitter", "href": "https://twitter.com/neronahealth", "icon": "twitter" },
+    { "name": "LinkedIn", "href": "https://linkedin.com/company/neronahealth", "icon": "linkedin" },
+    { "name": "Instagram", "href": "https://instagram.com/neronahealth", "icon": "instagram" },
+    { "name": "Facebook", "href": "https://facebook.com/neronahealth", "icon": "facebook" }
+  ]
+}

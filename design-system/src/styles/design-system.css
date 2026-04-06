@@ -1,0 +1,381 @@
+/**
+ * HealthBudi Design System - CSS Variables
+ * 
+ * This is the single source of truth for all design tokens.
+ * Import this file before any other styles.
+ */
+
+:root {
+  /* ========================================
+   * BRAND COLORS - PRIMARY (CORAL FLAME)
+   * ======================================== */
+  --color-primary-50: 254 247 245;
+  --color-primary-100: 254 236 232;
+  --color-primary-200: 253 214 206;
+  --color-primary-300: 251 181 165;
+  --color-primary-400: 247 143 120;
+  --color-primary-500: 247 106 77;
+  --color-primary-600: 223 80 53;
+  --color-primary-700: 190 61 36;
+  --color-primary-800: 158 52 32;
+  --color-primary-900: 131 47 30;
+  --color-primary-950: 70 21 13;
+  
+  --color-primary: var(--color-primary-500);
+  --color-primary-foreground: 255 255 255;
+  
+  /* ========================================
+   * BRAND COLORS - SECONDARY (NATURE GREEN)
+   * ======================================== */
+  --color-secondary-50: 242 249 243;
+  --color-secondary-100: 228 244 230;
+  --color-secondary-200: 201 232 204;
+  --color-secondary-300: 163 214 168;
+  --color-secondary-400: 118 191 124;
+  --color-secondary-500: 81 153 84;
+  --color-secondary-600: 61 122 64;
+  --color-secondary-700: 47 95 50;
+  --color-secondary-800: 39 77 41;
+  --color-secondary-900: 29 58 31;
+  --color-secondary-950: 15 29 16;
+  
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-foreground: 255 255 255;
+  
+  /* ========================================
+   * BRAND COLORS - TERTIARY (SKY BLUE)
+   * ======================================== */
+  --color-tertiary-50: 240 249 255;
+  --color-tertiary-100: 224 242 254;
+  --color-tertiary-200: 186 230 253;
+  --color-tertiary-300: 125 211 252;
+  --color-tertiary-400: 56 189 248;
+  --color-tertiary-500: 14 165 233;
+  --color-tertiary-600: 2 132 199;
+  --color-tertiary-700: 3 105 161;
+  --color-tertiary-800: 7 89 133;
+  --color-tertiary-900: 12 74 110;
+  --color-tertiary-950: 8 47 73;
+  
+  --color-tertiary: var(--color-tertiary-500);
+  --color-tertiary-foreground: 255 255 255;
+  
+  /* ========================================
+   * SEMANTIC COLORS
+   * ======================================== */
+  --color-success: 34 197 94;
+  --color-success-foreground: 255 255 255;
+  
+  --color-warning: 245 158 11;
+  --color-warning-foreground: 255 255 255;
+  
+  --color-error: 239 68 68;
+  --color-error-foreground: 255 255 255;
+  
+  --color-info: 59 130 246;
+  --color-info-foreground: 255 255 255;
+  
+  /* ========================================
+   * LIGHT THEME (DEFAULT)
+   * ======================================== */
+  --color-background: 255 255 255;
+  --color-foreground: 28 25 23;
+  
+  --color-background-subtle: 250 250 249;
+  --color-background-muted: 245 245 244;
+  --color-background-emphasis: 231 229 228;
+  
+  --color-foreground-muted: 68 64 60;
+  --color-foreground-subtle: 87 83 78;
+  --color-foreground-emphasis: 120 114 108;
+  
+  --color-border: 231 229 228;
+  --color-border-muted: 214 211 209;
+  --color-border-emphasis: 168 162 158;
+  
+  --color-input-background: 255 255 255;
+  --color-input-border: 214 211 209;
+  --color-input-placeholder: 168 162 158;
+  
+  --color-interactive-hover: 245 245 244;
+  --color-interactive-active: 231 229 228;
+  --color-interactive-selected: 254 247 245;
+  
+  /* ========================================
+   * TYPOGRAPHY
+   * ======================================== */
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, Monaco, monospace;
+  
+  --text-2xs: 0.625rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-9xl: 8rem;
+  
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+  
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ========================================
+   * SPACING
+   * ======================================== */
+  --space-px: 1px;
+  --space-0: 0;
+  --space-0.5: 0.125rem;
+  --space-1: 0.25rem;
+  --space-1.5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-2.5: 0.625rem;
+  --space-3: 0.75rem;
+  --space-3.5: 0.875rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-9: 2.25rem;
+  --space-10: 2.5rem;
+  --space-11: 2.75rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-36: 9rem;
+  --space-40: 10rem;
+  --space-44: 11rem;
+  --space-48: 12rem;
+  --space-52: 13rem;
+  --space-56: 14rem;
+  --space-60: 15rem;
+  --space-64: 16rem;
+  --space-72: 18rem;
+  --space-80: 20rem;
+  --space-96: 24rem;
+  
+  /* ========================================
+   * SHADOWS & ELEVATION
+   * ======================================== */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  
+  --glow-primary: 0 0 20px rgb(247 106 77 / 0.3);
+  --glow-secondary: 0 0 20px rgb(81 153 84 / 0.3);
+  --glow-tertiary: 0 0 20px rgb(14 165 233 / 0.3);
+  --glow-success: 0 0 20px rgb(34 197 94 / 0.3);
+  --glow-warning: 0 0 20px rgb(245 158 11 / 0.3);
+  --glow-error: 0 0 20px rgb(239 68 68 / 0.3);
+  --glow-info: 0 0 20px rgb(59 130 246 / 0.3);
+  
+  /* ========================================
+   * BORDER RADIUS
+   * ======================================== */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+  --radius-full: 9999px;
+  
+  /* ========================================
+   * TRANSITIONS & ANIMATIONS
+   * ======================================== */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-400: 400ms;
+  --duration-500: 500ms;
+  
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+  --transition-none: none;
+  --transition-all: all 150ms ease-in-out;
+  --transition-colors: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  --transition-opacity: opacity 150ms ease-in-out;
+  --transition-shadow: box-shadow 150ms ease-in-out;
+  --transition-transform: transform 150ms ease-in-out;
+  
+  /* ========================================
+   * Z-INDEX SCALE
+   * ======================================== */
+  --z-hide: -1;
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 70;
+  --z-toast: 80;
+  --z-top: 90;
+  --z-max: 999;
+  
+  /* ========================================
+   * BREAKPOINTS (for reference, use in media queries)
+   * ======================================== */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+}
+
+/* ========================================
+ * DARK THEME
+ * ======================================== */
+.dark {
+  --color-background: 12 10 9;
+  --color-foreground: 250 250 249;
+  
+  --color-background-subtle: 28 25 23;
+  --color-background-muted: 41 37 36;
+  --color-background-emphasis: 68 64 60;
+  
+  --color-foreground-muted: 231 229 228;
+  --color-foreground-subtle: 214 211 209;
+  --color-foreground-emphasis: 168 162 158;
+  
+  --color-border: 41 37 36;
+  --color-border-muted: 68 64 60;
+  --color-border-emphasis: 87 83 78;
+  
+  --color-input-background: 28 25 23;
+  --color-input-border: 68 64 60;
+  --color-input-placeholder: 120 114 108;
+  
+  --color-interactive-hover: 41 37 36;
+  --color-interactive-active: 68 64 60;
+  --color-interactive-selected: 70 21 13;
+  
+  --color-primary: 247 143 120;
+  --color-primary-foreground: 28 25 23;
+  
+  --color-secondary: 118 191 124;
+  --color-secondary-foreground: 28 25 23;
+  
+  --color-tertiary: 56 189 248;
+  --color-tertiary-foreground: 28 25 23;
+  
+  --color-success: 74 222 128;
+  --color-success-foreground: 28 25 23;
+  
+  --color-warning: 251 191 36;
+  --color-warning-foreground: 28 25 23;
+  
+  --color-error: 248 113 113;
+  --color-error-foreground: 28 25 23;
+  
+  --color-info: 96 165 250;
+  --color-info-foreground: 28 25 23;
+  
+  /* Darker shadows for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.3);
+}
+
+/* ========================================
+ * THEME TRANSITION (smooth theme switch)
+ * ======================================== */
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 150ms ease-in-out,
+              border-color 150ms ease-in-out,
+              color 150ms ease-in-out,
+              box-shadow 150ms ease-in-out;
+}
+
+/* ========================================
+ * FOCUS VISIBLE (keyboard-only focus)
+ * ======================================== */
+.focus-visible:focus {
+  outline: none;
+}
+
+.focus-visible:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+
+/* ========================================
+ * REDUCED MOTION
+ * ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+ * HIGH CONTRAST MODE
+ * ======================================== */
+@media (forced-colors: active) {
+  .focus-visible:focus-visible {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+}
