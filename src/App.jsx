@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -13,6 +13,14 @@ import BookAppointment from './pages/BookAppointment';
 import Appointments from './pages/Appointments';
 import Ambulance from './pages/Ambulance';
 import CareNavigator from './pages/CareNavigator';
+import About from './pages/About';
+import ForPatients from './pages/ForPatients';
+import ForHospitals from './pages/ForHospitals';
+import ForAmbulance from './pages/ForAmbulance';
+import Download from './pages/Download';
+import LegalComingSoon from './pages/LegalComingSoon';
+import Founders from './pages/Founders';
+import DesignSystem from './pages/DesignSystem';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -37,7 +45,7 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Navigate to="/Home" replace />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/FindCare" element={<FindCare />} />
         <Route path="/Directory" element={<Directory />} />
@@ -45,6 +53,14 @@ const AuthenticatedApp = () => {
         <Route path="/Appointments" element={<Appointments />} />
         <Route path="/Ambulance" element={<Ambulance />} />
         <Route path="/CareNavigator" element={<CareNavigator />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/for-patients" element={<ForPatients />} />
+        <Route path="/for-hospitals" element={<ForHospitals />} />
+        <Route path="/for-ambulance" element={<ForAmbulance />} />
+        <Route path="/download" element={<Download />} />
+        <Route path="/legal-coming-soon" element={<LegalComingSoon />} />
+        <Route path="/founders" element={<Founders />} />
+        <Route path="/design-system" element={<DesignSystem />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

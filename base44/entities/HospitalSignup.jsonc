@@ -1,0 +1,98 @@
+{
+  "name": "HospitalSignup",
+  "type": "object",
+  "properties": {
+    "hospital_name": {
+      "type": "string"
+    },
+    "facility_type": {
+      "type": "string",
+      "enum": [
+        "Hospital",
+        "Clinic",
+        "Specialist Center",
+        "Diagnostic Center"
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "area_other": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "contact_role": {
+      "type": "string"
+    },
+    "phone_primary": {
+      "type": "string"
+    },
+    "whatsapp_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "services_other": {
+      "type": "string"
+    },
+    "handles_emergency": {
+      "type": "string",
+      "enum": [
+        "Yes (24/7)",
+        "Yes (limited hours)",
+        "No"
+      ]
+    },
+    "operating_hours": {
+      "type": "string"
+    },
+    "response_time": {
+      "type": "string",
+      "enum": [
+        "Within 5 minutes",
+        "Within 10 minutes",
+        "Within 30 minutes",
+        "Longer"
+      ]
+    },
+    "preferred_contact": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_licensed": {
+      "type": "string",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "years_of_operation": {
+      "type": "string"
+    },
+    "additional_info": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "hospital_name",
+    "facility_type",
+    "address",
+    "contact_name",
+    "phone_primary",
+    "email"
+  ]
+}

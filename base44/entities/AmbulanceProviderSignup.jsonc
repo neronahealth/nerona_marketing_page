@@ -1,0 +1,67 @@
+{
+  "name": "AmbulanceProviderSignup",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "base_location": {
+      "type": "string"
+    },
+    "areas_covered": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "num_ambulances": {
+      "type": "string"
+    },
+    "ambulance_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "available_24_7": {
+      "type": "string",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "avg_response_time": {
+      "type": "string",
+      "enum": [
+        "<10 minutes",
+        "10\u201320 minutes",
+        "20\u201330 minutes",
+        "30+ minutes"
+      ]
+    },
+    "base_fee": {
+      "type": "string"
+    },
+    "additional_pricing": {
+      "type": "string"
+    },
+    "additional_info": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_name",
+    "contact_name",
+    "phone",
+    "email"
+  ]
+}

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { base44 } from '@/api/base44Client';
+import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, Loader2, MessageCircle, Sparkles, ArrowRight } from 'lucide-react';
@@ -21,7 +22,13 @@ export default function CareNavigator() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [messages]);
 
   const sendMessage = async (text) => {
@@ -34,11 +41,11 @@ export default function CareNavigator() {
     setLoading(true);
 
     const conversationContext = newMessages.slice(-8).map(m =>
-      `${m.role === 'user' ? 'Patient' : 'HealthBudi'}: ${m.content}`
+      `${m.role === 'user' ? 'Patient' : 'NeronaHealth'}: ${m.content}`
     ).join('\n');
 
     const response = await base44.integrations.Core.InvokeLLM({
-      prompt: `You are HealthBudi Care Navigator, an AI healthcare assistant for patients in Africa. You help patients understand their symptoms, recommend appropriate care levels, and suggest whether they need urgent care, a specialist, or can manage at home.
+      prompt: `You are NeronaHealth Care Navigator, an AI healthcare assistant for patients in Africa. You help patients understand their symptoms, recommend appropriate care levels, and suggest whether they need urgent care, a specialist, or can manage at home.
 
 Be empathetic, clear, and concise. Always remind patients that you are an AI assistant and they should consult a medical professional for proper diagnosis.
 
@@ -47,10 +54,10 @@ If the conversation suggests urgency, recommend they use the "Find Care Now" or 
 Conversation so far:
 ${conversationContext}
 
-Respond naturally as HealthBudi to the patient's latest message. Use markdown for formatting where helpful. Keep responses under 200 words.`,
+Respond naturally as NeronaHealth to the patient's latest message. Use markdown for formatting where helpful. Keep responses under 200 words.`,
     });
 
-    setMessages([...newMessages, { role: 'assistant', content: response }]);
+    setMessages([...newMessages, { role: 'assistant', content: response, showDownload: true }]);
     setLoading(false);
   };
 
@@ -98,7 +105,7 @@ Respond naturally as HealthBudi to the patient's latest message. Use markdown fo
             key={i}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
           >
             <div className={`max-w-[85%] rounded-2xl px-4 py-3 ${
               msg.role === 'user'
@@ -113,6 +120,17 @@ Respond naturally as HealthBudi to the patient's latest message. Use markdown fo
                 </div>
               )}
             </div>
+            {msg.showDownload && (
+              <div className="mt-3 max-w-[85%] bg-primary/5 border border-primary/20 rounded-2xl p-5 text-center">
+                <p className="text-sm font-semibold text-foreground mb-1">Want to continue this conversation?</p>
+                <p className="text-xs text-muted-foreground mb-4">Download the Neurona app for full AI Care Navigator access.</p>
+                <Link to="/download">
+                  <Button size="sm" className="gap-2 rounded-xl">
+                    <Download className="w-3.5 h-3.5" /> Download App
+                  </Button>
+                </Link>
+              </div>
+            )}
           </motion.div>
         ))}
 

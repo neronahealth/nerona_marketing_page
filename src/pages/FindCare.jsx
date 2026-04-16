@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { base44 } from '@/api/base44Client';
+import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -22,7 +23,7 @@ export default function FindCare() {
     const hospitals = await base44.entities.Hospital.list('-rating', 50);
 
     const aiResult = await base44.integrations.Core.InvokeLLM({
-      prompt: `You are HealthBudi, an AI healthcare navigator for Africa. A patient reports the following:
+      prompt: `You are NeronaHealth, an AI healthcare navigator for Africa. A patient reports the following:
 
 Symptoms: ${symptoms}
 Severity: ${severity || 'Not specified'}
@@ -199,65 +200,30 @@ Also provide:
                 )}
               </div>
 
-              {/* Recommended Hospitals */}
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <Building2 className="w-5 h-5 text-primary" />
-                  Recommended Facilities
-                </h3>
-                <div className="space-y-3">
-                  {results.hospitals?.map((rec, i) => (
-                    <div
-                      key={i}
-                      className="bg-card rounded-2xl border border-border p-5 hover:border-primary/30 hover:shadow-md transition-all"
-                    >
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                        <div className="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden">
-                          <img
-                            src={rec.details?.image_url || 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200'}
-                            alt={rec.hospital_name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                              #{i + 1} Match
-                            </span>
-                            {rec.details?.verified && (
-                              <ShieldCheck className="w-4 h-4 text-primary" />
-                            )}
-                          </div>
-                          <h4 className="font-semibold text-foreground">{rec.hospital_name}</h4>
-                          <div className="flex items-center gap-3 text-xs text-muted-foreground mt-1">
-                            <span className="flex items-center gap-1">
-                              <MapPin className="w-3 h-3" /> {rec.details?.city}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <Star className="w-3 h-3 text-amber-500" fill="currentColor" /> {rec.details?.rating}
-                            </span>
-                          </div>
-                          <p className="text-sm text-muted-foreground mt-2">{rec.reason}</p>
-                        </div>
-                        <Link to={`/Directory?hospital=${rec.hospital_id}`}>
-                          <Button variant="outline" size="sm" className="gap-1 rounded-xl flex-shrink-0">
-                            View <ArrowRight className="w-3.5 h-3.5" />
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
+              {/* Download Prompt */}
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Download className="w-7 h-7 text-primary" />
                 </div>
-              </div>
-
-              {results.needs_emergency && (
-                <Link to="/Ambulance">
-                  <Button className="w-full h-12 rounded-xl gap-2 bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
-                    <AlertTriangle className="w-5 h-5" />
-                    Request Emergency Ambulance
+                <h3 className="text-xl font-bold text-foreground mb-2">Download the App to Continue</h3>
+                <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
+                  Your results are ready! Download the Neurona app to view your matched hospitals and book care.
+                </p>
+                {results.needs_emergency && (
+                  <Link to="/Ambulance" className="block mb-3">
+                    <Button className="w-full h-12 rounded-xl gap-2 bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
+                      <AlertTriangle className="w-5 h-5" />
+                      Request Emergency Ambulance
+                    </Button>
+                  </Link>
+                )}
+                <Link to="/download">
+                  <Button className="h-12 px-8 rounded-xl gap-2 shadow-lg shadow-primary/20" size="lg">
+                    <Download className="w-4 h-4" />
+                    Download Neurona App
                   </Button>
                 </Link>
-              )}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

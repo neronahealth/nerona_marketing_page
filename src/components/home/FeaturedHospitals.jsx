@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Star, MapPin, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Star, MapPin, ShieldCheck, Download, ArrowRight } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
 
 export default function FeaturedHospitals() {
   const { data: hospitals, isLoading } = useQuery({
@@ -12,22 +13,16 @@ export default function FeaturedHospitals() {
 
   return (
     <section className="bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Top Verified Hospitals
+              Trusted Healthcare Partners
             </h2>
             <p className="mt-1 text-muted-foreground">
-              Trusted facilities across Africa
+              Verified facilities across Africa, full access in the app
             </p>
           </div>
-          <Link
-            to="/Directory"
-            className="hidden sm:flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-          >
-            View all <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -39,18 +34,24 @@ export default function FeaturedHospitals() {
                   <Skeleton className="h-4 w-1/2" />
                 </div>
               ))
-            : hospitals?.map((hospital) => (
-                <Link
+            : (hospitals || []).map((hospital) => (
+                <div
                   key={hospital.id}
-                  to={`/Directory?hospital=${hospital.id}`}
                   className="group rounded-2xl bg-card border border-border/50 overflow-hidden hover:shadow-lg hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={hospital.image_url || 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400'}
                       alt={hospital.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                      <Link to="/download">
+                        <Button size="sm" className="rounded-full gap-1.5 text-xs">
+                          <Download className="w-3 h-3" /> View in App
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                   <div className="p-4">
                     <div className="flex items-center gap-1.5 mb-1">
@@ -77,16 +78,19 @@ export default function FeaturedHospitals() {
                       )}
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
         </div>
 
-        <Link
-          to="/Directory"
-          className="sm:hidden flex items-center justify-center gap-1 mt-6 text-sm font-medium text-primary"
-        >
-          View all hospitals <ArrowRight className="w-4 h-4" />
-        </Link>
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <Link to="/download">
+            <Button variant="outline" className="rounded-xl gap-2">
+              Download App for Full Directory
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );

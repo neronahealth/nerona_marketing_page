@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, Siren, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Smartphone, Search, Siren } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
@@ -12,7 +12,7 @@ export default function HeroSection() {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-6 tracking-wide uppercase">
               <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-              AI-Powered Healthcare Access
+              AI-Powered Healthcare Navigation
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight tracking-tight">
@@ -31,15 +31,14 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-5 text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Navigate Africa's healthcare with confidence. AI-powered symptom evaluation, verified providers, and emergency coordination — all in one platform.
+              Navigate Africa's healthcare with confidence. AI-powered symptom evaluation, verified providers, and emergency coordination, all in one app.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 flex-wrap">
               <Link to="/FindCare">
                 <Button size="lg" className="w-full sm:w-auto gap-2 h-12 px-6 text-base rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all">
                   <Search className="w-4 h-4" />
                   Find Care Now
-                  <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
               <Link to="/Ambulance">
@@ -48,6 +47,17 @@ export default function HeroSection() {
                   Request Ambulance
                 </Button>
               </Link>
+              <Link to="/download">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 h-12 px-6 text-base rounded-xl transition-all">
+                  <Download className="w-4 h-4" />
+                  Download App
+                </Button>
+              </Link>
+            </div>
+
+            <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
+              <Smartphone className="w-4 h-4" />
+              <span>Available on iOS and Android</span>
             </div>
 
             <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
@@ -90,7 +100,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">AI Match Found</p>
-                    <p className="text-sm font-semibold text-foreground">Best hospital nearby</p>
+                    <p className="text-sm font-semibold text-foreground">Best care nearby</p>
                   </div>
                 </div>
               </div>
